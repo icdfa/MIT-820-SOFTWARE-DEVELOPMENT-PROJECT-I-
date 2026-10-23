@@ -1,0 +1,790 @@
+{
+  "version": "2026.1",
+  "disclosure": "All named people, businesses, requests and documents in this dataset are fictional demonstration material. Public location names provide context only. No external message delivery is scheduled.",
+  "users": [
+    {
+      "name": "Amina Bello",
+      "email": "amina.bello@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Chinedu Okafor",
+      "email": "chinedu.okafor@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Fatima Sani",
+      "email": "fatima.sani@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Daniel Adeyemi",
+      "email": "daniel.adeyemi@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Zainab Usman",
+      "email": "zainab.usman@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Ifeanyi Nwankwo",
+      "email": "ifeanyi.nwankwo@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Maryam Adamu",
+      "email": "maryam.adamu@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Tunde Olawale",
+      "email": "tunde.olawale@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Esther Akpan",
+      "email": "esther.akpan@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Yusuf Ibrahim",
+      "email": "yusuf.ibrahim@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Grace Ogbole",
+      "email": "grace.ogbole@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Abdulrahman Aliyu",
+      "email": "abdulrahman.aliyu@civicflow.example.test",
+      "role": "citizen",
+      "department": null
+    },
+    {
+      "name": "Abdullahi Musa",
+      "email": "abdullahi.musa@civicflow.example.test",
+      "role": "officer",
+      "department": "WORKS"
+    },
+    {
+      "name": "Rebecca Danjuma",
+      "email": "rebecca.danjuma@civicflow.example.test",
+      "role": "officer",
+      "department": "WORKS"
+    },
+    {
+      "name": "Kenneth Obi",
+      "email": "kenneth.obi@civicflow.example.test",
+      "role": "officer",
+      "department": "TRADE"
+    },
+    {
+      "name": "Hadiza Sule",
+      "email": "hadiza.sule@civicflow.example.test",
+      "role": "officer",
+      "department": "TRADE"
+    },
+    {
+      "name": "Paul Eze",
+      "email": "paul.eze@civicflow.example.test",
+      "role": "officer",
+      "department": "ENV"
+    },
+    {
+      "name": "Safiya Umar",
+      "email": "safiya.umar@civicflow.example.test",
+      "role": "officer",
+      "department": "ENV"
+    },
+    {
+      "name": "Olumide Akinyemi",
+      "email": "olumide.akinyemi@civicflow.example.test",
+      "role": "officer",
+      "department": "PLAN"
+    },
+    {
+      "name": "Rose Dogo",
+      "email": "rose.dogo@civicflow.example.test",
+      "role": "officer",
+      "department": "PLAN"
+    },
+    {
+      "name": "Usman Shuaibu",
+      "email": "usman.shuaibu@civicflow.example.test",
+      "role": "department_head",
+      "department": "WORKS"
+    },
+    {
+      "name": "Elizabeth Okonkwo",
+      "email": "elizabeth.okonkwo@civicflow.example.test",
+      "role": "department_head",
+      "department": "TRADE"
+    },
+    {
+      "name": "Musa Sani",
+      "email": "musa.sani@civicflow.example.test",
+      "role": "department_head",
+      "department": "ENV"
+    },
+    {
+      "name": "Victoria Odeh",
+      "email": "victoria.odeh@civicflow.example.test",
+      "role": "department_head",
+      "department": "PLAN"
+    },
+    {
+      "name": "Joseph Nwosu",
+      "email": "joseph.nwosu@civicflow.example.test",
+      "role": "auditor",
+      "department": null
+    },
+    {
+      "name": "Hauwa Saleh",
+      "email": "hauwa.saleh@civicflow.example.test",
+      "role": "communications",
+      "department": null
+    }
+  ],
+  "departments": [
+    {
+      "code": "WORKS",
+      "name": "Public Works",
+      "description": "Roads, drainage, public infrastructure and lighting."
+    },
+    {
+      "code": "TRADE",
+      "name": "Commerce and Industry",
+      "description": "Business premises, licences and commercial service requests."
+    },
+    {
+      "code": "ENV",
+      "name": "Environment and Sanitation",
+      "description": "Waste, environmental concerns and event sanitation."
+    },
+    {
+      "code": "PLAN",
+      "name": "Planning and Development",
+      "description": "Development applications, site enquiries and planning concerns."
+    }
+  ],
+  "services": [
+    {
+      "department": "WORKS",
+      "title": "Report damaged roads",
+      "slug": "road-maintenance",
+      "kind": "complaint",
+      "sla_hours": 72,
+      "requirements": "Location, description and photographs where available."
+    },
+    {
+      "department": "WORKS",
+      "title": "Street lighting complaint",
+      "slug": "street-lighting",
+      "kind": "complaint",
+      "sla_hours": 48,
+      "requirements": "Pole location or nearest landmark."
+    },
+    {
+      "department": "TRADE",
+      "title": "Business premises permit",
+      "slug": "business-premises",
+      "kind": "permit",
+      "sla_hours": 120,
+      "requirements": "Business registration evidence, proof of occupancy and applicant details."
+    },
+    {
+      "department": "TRADE",
+      "title": "Trade licence",
+      "slug": "trade-licence",
+      "kind": "permit",
+      "sla_hours": 72,
+      "requirements": "Business address, activity description and applicant details."
+    },
+    {
+      "department": "ENV",
+      "title": "Waste collection complaint",
+      "slug": "waste-collection",
+      "kind": "complaint",
+      "sla_hours": 48,
+      "requirements": "Collection point, location and dates affected."
+    },
+    {
+      "department": "ENV",
+      "title": "Environmental nuisance",
+      "slug": "environmental-nuisance",
+      "kind": "complaint",
+      "sla_hours": 72,
+      "requirements": "Location, type of nuisance and supporting information."
+    },
+    {
+      "department": "ENV",
+      "title": "Event sanitation permit",
+      "slug": "event-sanitation",
+      "kind": "permit",
+      "sla_hours": 96,
+      "requirements": "Venue details, event plan and waste management arrangements."
+    },
+    {
+      "department": "PLAN",
+      "title": "Building development permit",
+      "slug": "building-permit",
+      "kind": "permit",
+      "sla_hours": 168,
+      "requirements": "Site information, proposed drawings and applicant documents."
+    },
+    {
+      "department": "PLAN",
+      "title": "Planning enquiry or complaint",
+      "slug": "planning-enquiry",
+      "kind": "complaint",
+      "sla_hours": 96,
+      "requirements": "Site location and a clear description of the planning concern."
+    }
+  ],
+  "requests": [
+    {
+      "service": "road-maintenance",
+      "subject": "Drainage failure beside the community market",
+      "description": "The drainage channel beside the community market no longer carries runoff away from the access road. Water remains across the pedestrian approach after rainfall. Please inspect the channel, identify the obstruction and advise on the repair schedule. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "submitted",
+      "citizen": 0,
+      "officer_index": 0,
+      "priority": "high",
+      "age_hours": 24,
+      "feedback": null
+    },
+    {
+      "service": "road-maintenance",
+      "subject": "Potholes on the access road to the health centre",
+      "description": "The drainage channel beside the community market no longer carries runoff away from the access road. Water remains across the pedestrian approach after rainfall. Please inspect the channel, identify the obstruction and advise on the repair schedule. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "in_review",
+      "citizen": 1,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 48,
+      "feedback": null
+    },
+    {
+      "service": "road-maintenance",
+      "subject": "Blocked culvert at the school junction",
+      "description": "The drainage channel beside the community market no longer carries runoff away from the access road. Water remains across the pedestrian approach after rainfall. Please inspect the channel, identify the obstruction and advise on the repair schedule. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "resolved",
+      "citizen": 2,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 72,
+      "feedback": 5
+    },
+    {
+      "service": "road-maintenance",
+      "subject": "Erosion at a residential access junction",
+      "description": "The drainage channel beside the community market no longer carries runoff away from the access road. Water remains across the pedestrian approach after rainfall. Please inspect the channel, identify the obstruction and advise on the repair schedule. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "needs_information",
+      "citizen": 3,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 96,
+      "feedback": null
+    },
+    {
+      "service": "street-lighting",
+      "subject": "Streetlights not working along the market approach",
+      "description": "Several lighting points along the approach are not operating after dark. The affected section is used by pedestrians and small-business owners. Please inspect the fittings and advise whether a repair crew can restore the lights. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "submitted",
+      "citizen": 4,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 33,
+      "feedback": null
+    },
+    {
+      "service": "street-lighting",
+      "subject": "Damaged light fitting near the bus stop",
+      "description": "Several lighting points along the approach are not operating after dark. The affected section is used by pedestrians and small-business owners. Please inspect the fittings and advise whether a repair crew can restore the lights. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "in_review",
+      "citizen": 5,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 57,
+      "feedback": null
+    },
+    {
+      "service": "street-lighting",
+      "subject": "Street lighting restored on the estate access road",
+      "description": "Several lighting points along the approach are not operating after dark. The affected section is used by pedestrians and small-business owners. Please inspect the fittings and advise whether a repair crew can restore the lights. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "resolved",
+      "citizen": 6,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 81,
+      "feedback": 5
+    },
+    {
+      "service": "street-lighting",
+      "subject": "Lighting report submitted for the wrong junction",
+      "description": "Several lighting points along the approach are not operating after dark. The affected section is used by pedestrians and small-business owners. Please inspect the fittings and advise whether a repair crew can restore the lights. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "withdrawn",
+      "citizen": 7,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 105,
+      "feedback": null
+    },
+    {
+      "service": "business-premises",
+      "subject": "Premises permit for Bello Foods and Provisions",
+      "description": "I am applying for review of a neighbourhood business premises. The application dossier sets out the proposed activity, premises arrangements and contact information. Please review the submitted evidence and advise if further occupancy documentation is needed. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Nwankwo Electrical Supplies",
+      "status": "submitted",
+      "citizen": 8,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 42,
+      "feedback": null
+    },
+    {
+      "service": "business-premises",
+      "subject": "Occupancy evidence for Cedar Laundry Services",
+      "description": "I am applying for review of a neighbourhood business premises. The application dossier sets out the proposed activity, premises arrangements and contact information. Please review the submitted evidence and advise if further occupancy documentation is needed. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Brightline Mobile Repairs",
+      "status": "needs_information",
+      "citizen": 9,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 66,
+      "feedback": null
+    },
+    {
+      "service": "business-premises",
+      "subject": "Premises permit for Riverbend Printing Studio",
+      "description": "I am applying for review of a neighbourhood business premises. The application dossier sets out the proposed activity, premises arrangements and contact information. Please review the submitted evidence and advise if further occupancy documentation is needed. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Ogbole Tailoring Studio",
+      "status": "approved",
+      "citizen": 10,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 90,
+      "feedback": 5
+    },
+    {
+      "service": "business-premises",
+      "subject": "Incomplete premises application for Northgate Stores",
+      "description": "I am applying for review of a neighbourhood business premises. The application dossier sets out the proposed activity, premises arrangements and contact information. Please review the submitted evidence and advise if further occupancy documentation is needed. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Sunrise Home Goods",
+      "status": "rejected",
+      "citizen": 11,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 114,
+      "feedback": null
+    },
+    {
+      "service": "trade-licence",
+      "subject": "Trade licence for Nwankwo Electrical Supplies",
+      "description": "This application concerns the operation of a small trading or service business. The business description and premises arrangements are included in the attached application dossier. Please review the activity against the published licence requirements. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Ogbole Tailoring Studio",
+      "status": "submitted",
+      "citizen": 0,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 24,
+      "feedback": null
+    },
+    {
+      "service": "trade-licence",
+      "subject": "Mobile repair workshop trade application",
+      "description": "This application concerns the operation of a small trading or service business. The business description and premises arrangements are included in the attached application dossier. Please review the activity against the published licence requirements. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Sunrise Home Goods",
+      "status": "in_review",
+      "citizen": 1,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 48,
+      "feedback": null
+    },
+    {
+      "service": "trade-licence",
+      "subject": "Trade licence for Ogbole Tailoring Studio",
+      "description": "This application concerns the operation of a small trading or service business. The business description and premises arrangements are included in the attached application dossier. Please review the activity against the published licence requirements. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Community Skills Circle",
+      "status": "approved",
+      "citizen": 2,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 72,
+      "feedback": 5
+    },
+    {
+      "service": "trade-licence",
+      "subject": "Draft trade application for Sunrise Home Goods",
+      "description": "This application concerns the operation of a small trading or service business. The business description and premises arrangements are included in the attached application dossier. Please review the activity against the published licence requirements. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Neighbourhood Food Collective",
+      "status": "draft",
+      "citizen": 3,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 96,
+      "feedback": null
+    },
+    {
+      "service": "waste-collection",
+      "subject": "Missed collection at the community disposal point",
+      "description": "Waste has remained at the identified public collection point beyond the usual collection period. Containers are overflowing and the pedestrian route is becoming difficult to use. Please arrange an inspection and advise on collection arrangements. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "submitted",
+      "citizen": 4,
+      "officer_index": 0,
+      "priority": "high",
+      "age_hours": 33,
+      "feedback": null
+    },
+    {
+      "service": "waste-collection",
+      "subject": "Overflowing public waste containers near the market",
+      "description": "Waste has remained at the identified public collection point beyond the usual collection period. Containers are overflowing and the pedestrian route is becoming difficult to use. Please arrange an inspection and advise on collection arrangements. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "in_review",
+      "citizen": 5,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 57,
+      "feedback": null
+    },
+    {
+      "service": "waste-collection",
+      "subject": "Waste accumulation cleared from a school approach",
+      "description": "Waste has remained at the identified public collection point beyond the usual collection period. Containers are overflowing and the pedestrian route is becoming difficult to use. Please arrange an inspection and advise on collection arrangements. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "resolved",
+      "citizen": 6,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 81,
+      "feedback": 5
+    },
+    {
+      "service": "waste-collection",
+      "subject": "Clarification on collection arrangements for a new street",
+      "description": "Waste has remained at the identified public collection point beyond the usual collection period. Containers are overflowing and the pedestrian route is becoming difficult to use. Please arrange an inspection and advise on collection arrangements. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "needs_information",
+      "citizen": 7,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 105,
+      "feedback": null
+    },
+    {
+      "service": "environmental-nuisance",
+      "subject": "Persistent workshop noise beside a residential lane",
+      "description": "I wish to report an environmental nuisance affecting the adjoining residential area. The supporting note describes the location and when the problem is observed. Please assess the issue and advise on an appropriate response. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "submitted",
+      "citizen": 8,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 42,
+      "feedback": null
+    },
+    {
+      "service": "environmental-nuisance",
+      "subject": "Smoke from open waste burning near a public footpath",
+      "description": "I wish to report an environmental nuisance affecting the adjoining residential area. The supporting note describes the location and when the problem is observed. Please assess the issue and advise on an appropriate response. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "in_review",
+      "citizen": 9,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 66,
+      "feedback": null
+    },
+    {
+      "service": "environmental-nuisance",
+      "subject": "Environmental nuisance resolved after site inspection",
+      "description": "I wish to report an environmental nuisance affecting the adjoining residential area. The supporting note describes the location and when the problem is observed. Please assess the issue and advise on an appropriate response. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "resolved",
+      "citizen": 10,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 90,
+      "feedback": 5
+    },
+    {
+      "service": "environmental-nuisance",
+      "subject": "Duplicate nuisance report withdrawn by the applicant",
+      "description": "I wish to report an environmental nuisance affecting the adjoining residential area. The supporting note describes the location and when the problem is observed. Please assess the issue and advise on an appropriate response. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "withdrawn",
+      "citizen": 11,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 114,
+      "feedback": null
+    },
+    {
+      "service": "event-sanitation",
+      "subject": "Sanitation review for a community skills fair",
+      "description": "The organisers request a sanitation review for a community event. The attached plan describes attendance assumptions, waste containers, cleaning responsibilities and post-event collection. Please assess the arrangements and identify any further conditions. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Bello Foods and Provisions",
+      "status": "submitted",
+      "citizen": 0,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 24,
+      "feedback": null
+    },
+    {
+      "service": "event-sanitation",
+      "subject": "Waste plan for a neighbourhood food exhibition",
+      "description": "The organisers request a sanitation review for a community event. The attached plan describes attendance assumptions, waste containers, cleaning responsibilities and post-event collection. Please assess the arrangements and identify any further conditions. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Cedar Laundry Services",
+      "status": "needs_information",
+      "citizen": 1,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 48,
+      "feedback": null
+    },
+    {
+      "service": "event-sanitation",
+      "subject": "Sanitation permit for the Nasara Arts Weekend",
+      "description": "The organisers request a sanitation review for a community event. The attached plan describes attendance assumptions, waste containers, cleaning responsibilities and post-event collection. Please assess the arrangements and identify any further conditions. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Riverbend Printing Studio",
+      "status": "approved",
+      "citizen": 2,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 72,
+      "feedback": 5
+    },
+    {
+      "service": "event-sanitation",
+      "subject": "Event application missing venue consent",
+      "description": "The organisers request a sanitation review for a community event. The attached plan describes attendance assumptions, waste containers, cleaning responsibilities and post-event collection. Please assess the arrangements and identify any further conditions. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Northgate Stores",
+      "status": "rejected",
+      "citizen": 3,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 96,
+      "feedback": null
+    },
+    {
+      "service": "building-permit",
+      "subject": "Proposed single-storey family residence",
+      "description": "The applicant requests review of a modest development proposal. The application dossier describes the intended use, site context and supporting drawings register. Please examine the proposal and advise on the required corrections or additional evidence. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Riverbend Printing Studio",
+      "status": "submitted",
+      "citizen": 4,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 33,
+      "feedback": null
+    },
+    {
+      "service": "building-permit",
+      "subject": "Clarification of drawings for a small office extension",
+      "description": "The applicant requests review of a modest development proposal. The application dossier describes the intended use, site context and supporting drawings register. Please examine the proposal and advise on the required corrections or additional evidence. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Northgate Stores",
+      "status": "in_review",
+      "citizen": 5,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 57,
+      "feedback": null
+    },
+    {
+      "service": "building-permit",
+      "subject": "Development application for a neighbourhood clinic annex",
+      "description": "The applicant requests review of a modest development proposal. The application dossier describes the intended use, site context and supporting drawings register. Please examine the proposal and advise on the required corrections or additional evidence. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Nwankwo Electrical Supplies",
+      "status": "approved",
+      "citizen": 6,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 81,
+      "feedback": 5
+    },
+    {
+      "service": "building-permit",
+      "subject": "Draft application for a two-room shop extension",
+      "description": "The applicant requests review of a modest development proposal. The application dossier describes the intended use, site context and supporting drawings register. Please examine the proposal and advise on the required corrections or additional evidence. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "Brightline Mobile Repairs",
+      "status": "draft",
+      "citizen": 7,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 105,
+      "feedback": null
+    },
+    {
+      "service": "planning-enquiry",
+      "subject": "Clarification of public access beside a residential layout",
+      "description": "I request clarification of a planning or access concern at the identified location. A short site note describes the issue and the information sought. Please review the enquiry and explain the applicable next steps. The request is awaiting the department's initial review.",
+      "location": "Community market approach, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "submitted",
+      "citizen": 8,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 42,
+      "feedback": null
+    },
+    {
+      "service": "planning-enquiry",
+      "subject": "Drainage alignment query for a proposed development",
+      "description": "I request clarification of a planning or access concern at the identified location. A short site note describes the issue and the information sought. Please review the enquiry and explain the applicable next steps. The location note and application history provide the information needed for follow-up.",
+      "location": "Residential access road, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "in_review",
+      "citizen": 9,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 66,
+      "feedback": null
+    },
+    {
+      "service": "planning-enquiry",
+      "subject": "Planning guidance provided for a boundary concern",
+      "description": "I request clarification of a planning or access concern at the identified location. A short site note describes the issue and the information sought. Please review the enquiry and explain the applicable next steps. The location note and application history provide the information needed for follow-up.",
+      "location": "School junction area, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "resolved",
+      "citizen": 10,
+      "officer_index": 0,
+      "priority": "normal",
+      "age_hours": 90,
+      "feedback": 5
+    },
+    {
+      "service": "planning-enquiry",
+      "subject": "Request for a clearer site sketch for an access enquiry",
+      "description": "I request clarification of a planning or access concern at the identified location. A short site note describes the issue and the information sought. Please review the enquiry and explain the applicable next steps. The location note and application history provide the information needed for follow-up.",
+      "location": "Neighbourhood centre, Lafia",
+      "state_name": "Nasarawa",
+      "organisation": "",
+      "status": "needs_information",
+      "citizen": 11,
+      "officer_index": 1,
+      "priority": "normal",
+      "age_hours": 114,
+      "feedback": null
+    }
+  ],
+  "announcements": [
+    {
+      "title": "Keep your request reference after submission",
+      "body": "Your request page contains the reference, target and private tracking code. Keep these details so you can return to the same record when following up."
+    },
+    {
+      "title": "Preparing documents for a permit application",
+      "body": "Read the service requirements before applying. Use clear PDF, JPG or PNG files and make sure the documents relate to the premises, activity or event in your application."
+    },
+    {
+      "title": "Reply when a department requests more information",
+      "body": "Open the request, read the officer's message and provide the requested clarification in the conversation. Your reply returns the record for further review."
+    },
+    {
+      "title": "Use the service directory to find the right department",
+      "body": "Complaint and permit services are grouped by department. Review the description and requirements before starting a new request."
+    },
+    {
+      "title": "Protect your private tracking code",
+      "body": "The public tracker requires your reference and private code. Do not post the code in a public message. Sign in to view documents and the complete conversation."
+    },
+    {
+      "title": "Review the outcome and provide feedback",
+      "body": "Read the recorded decision and any follow-up instructions. After a complaint is resolved or a permit decision is recorded, you can leave a service rating from the request page."
+    }
+  ]
+}

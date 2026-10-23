@@ -1,0 +1,21 @@
+<?php
+declare(strict_types=1);
+function clean_email_html(string $html): string {
+ if(!class_exists('DOMDocument'))return '<p>'.nl2br(e(strip_tags($html))).'</p>';
+ $dom=new DOMDocument();libxml_use_internal_errors(true);$dom->loadHTML('<?xml encoding="utf-8" ?><div id="mail-root">'.$html.'</div>',LIBXML_HTML_NOIMPLIED|LIBXML_HTML_NODEFDTD);libxml_clear_errors();$root=$dom->getElementById('mail-root');if(!$root)return '<p>'.e(strip_tags($html)).'</p>';
+ $allowed=['p','br','strong','b','em','i','u','ul','ol','li','h2','h3','h4','blockquote','table','thead','tbody','tr','th','td','a','hr','div','span'];
+ $walk=function(DOMNode $node)use(&$walk,$allowed){foreach(iterator_to_array($node->childNodes)as $child){if($child instanceof DOMElement){$tag=strtolower($child->tagName);if(!in_array($tag,$allowed,true)){if(in_array($tag,['script','style','iframe','object','embed','form','input','svg','math','img','link','meta'],true)){$node->removeChild($child);continue;}$walk($child);while($child->firstChild)$node->insertBefore($child->firstChild,$child);$node->removeChild($child);continue;}$href=$tag==='a'?$child->getAttribute('href'):'';foreach(iterator_to_array($child->attributes)as $a)$child->removeAttribute($a->name);if($tag==='a'&&preg_match('~^(https?://[^\s<>]+|mailto:[^\s<>]+|\{\{link\}\})$~i',$href)){$child->setAttribute('href',$href);$child->setAttribute('rel','noopener noreferrer');}$walk($child);}elseif($child instanceof DOMComment)$node->removeChild($child);}};$walk($root);$out='';foreach($root->childNodes as $child)$out.=$dom->saveHTML($child);return $out;
+}
+function template_render(array $template,array $vars): array {
+ $subject=$template['subject'];$plain=$template['plain_body'];$html=clean_email_html($template['html_body']);foreach(['name','title','message','reference','status','service','department','link','app_name']as $key){$v=(string)($vars[$key]??'');$subject=str_replace('{{'.$key.'}}',str_replace(["\r","\n"],' ',$v),$subject);$plain=str_replace('{{'.$key.'}}',$v,$plain);$html=str_replace('{{'.$key.'}}',e($v),$html);}return ['subject'=>mb_substr($subject,0,180),'body'=>$plain,'html_body'=>$html];
+}
+function seed_email_templates(): void {
+ $defaults=[
+ ['service_update','Service request update','{{app_name}} — {{title}}','<h2>{{title}}</h2><p>Hello {{name}},</p><p>{{message}}</p><p><strong>Reference</strong> {{reference}}<br><strong>Service</strong> {{service}}<br><strong>Status</strong> {{status}}</p><p><a href="{{link}}">Open your service workspace</a></p><p>Thank you,<br>{{app_name}} service team</p>','Hello {{name}},\n\n{{message}}\n\nReference: {{reference}}\nService: {{service}}\nStatus: {{status}}\nOpen: {{link}}\n\n{{app_name}} service team'],
+ ['welcome','Welcome message','Welcome to {{app_name}}','<h2>Your citizen workspace is ready</h2><p>Hello {{name}},</p><p>{{message}}</p><p><a href="{{link}}">Explore citizen services</a></p>','Hello {{name}},\n{{message}}\nOpen: {{link}}'],
+ ['general_notice','General service notice','{{title}}','<h2>{{title}}</h2><p>Hello {{name}},</p><p>{{message}}</p><p><a href="{{link}}">Open {{app_name}}</a></p>','Hello {{name}},\n\n{{message}}\n\n{{link}}']
+ ];foreach($defaults as $x)insert('email_templates',['template_key'=>$x[0],'name'=>$x[1],'subject'=>$x[2],'html_body'=>$x[3],'plain_body'=>str_replace('\\n',"\n",$x[4]),'active'=>1,'updated_at'=>now()]);
+}
+function branded_email(string $body): string {
+ return '<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#f3f7f4;font-family:Arial,sans-serif;color:#263c30"><table role="presentation" style="width:100%;border-collapse:collapse"><tr><td style="padding:28px"><table role="presentation" style="max-width:640px;width:100%;margin:auto;background:white;border:1px solid #dce8de;border-collapse:collapse"><tr><td style="background:#075e45;color:white;padding:24px;font-size:24px;font-weight:bold">'.e(setting('app_name','CivicFlow')).'</td></tr><tr><td style="padding:28px;font-size:15px;line-height:1.7">'.$body.'</td></tr><tr><td style="padding:20px 28px;background:#f5f8f5;color:#68816e;font-size:11px">'.e(setting('organisation_name','CivicFlow')).'<br>Open your signed-in account to view private documents. Do not reply with passwords or sensitive identity information.</td></tr></table></td></tr></table></body></html>';
+}

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this Group 1 academic software project."
+title: "CivicFlow Smart Government Service Delivery Platform"
+type: software
+version: "1.0.4"
+date-released: "2026-10-19"
+authors:
+  - family-names: Idris
+    given-names: Aminu
+  - family-names: Suleman
+    given-names: Saidu Mustapha
+  - family-names: Watson
+    given-names: Bolaji
+  - family-names: Mayowa
+    given-names: John Ojuekaiye
+  - family-names: Celestine
+    given-names: Egbue Odira
+abstract: "MIT 820 Group 1 citizen service portal with complaints, permits, private evidence, departmental workflows, tracking and optional assistance."

@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Architecture and Workflows Mermaid</title><link rel="stylesheet" href="../../site.css"></head><body><main><nav><a href="../../../START_HERE.html">CivicFlow project home</a></nav><h1 id="architecture-and-workflow">Architecture and workflow</h1><h2 id="application-boundary">Application boundary</h2><p>The browser uses clean routes served through Apache&#x27;s front controller. PHP controls authentication, permissions and workflow decisions; PDO persists records. Private storage holds uploads, session files and operational state. Scheduled CLI jobs perform escalation and external delivery.</p><pre><code>flowchart TD
+  B[&quot;Citizen / staff browser&quot;] --&gt; A[&quot;Apache clean routes&quot;]
+  A --&gt; P[&quot;PHP front controller&quot;]
+  P --&gt; G[&quot;Session, CSRF and permission checks&quot;]
+  G --&gt; W[&quot;Request and administration workflows&quot;]
+  W --&gt; D[&quot;PDO: MySQL / MariaDB&quot;]
+  W --&gt; F[&quot;Private file storage&quot;]
+  C[&quot;Scheduled CLI worker&quot;] --&gt; D
+  C --&gt; N[&quot;SMTP / Termii delivery&quot;]
+  W --&gt; Q[&quot;Public service guide / optional AI&quot;]</code></pre><p><code>router.php</code> is a local development equivalent. It is not the production web server. All external calls are server-side, with TLS verification. API secrets do not enter page markup or client JavaScript.</p><h2 id="request-lifecycle">Request lifecycle</h2><pre><code>stateDiagram-v2
+  [*] --&gt; Draft: Save privately
+  [*] --&gt; Submitted: Submit online
+  Draft --&gt; Submitted: Complete and submit
+  Draft --&gt; Withdrawn: Owner withdraws
+  Submitted --&gt; InReview: Officer starts review
+  Submitted --&gt; Withdrawn: Owner withdraws
+  InReview --&gt; NeedsInformation: Officer requests details
+  NeedsInformation --&gt; Submitted: Citizen replies
+  NeedsInformation --&gt; InReview: Officer resumes review
+  NeedsInformation --&gt; Withdrawn: Owner withdraws
+  InReview --&gt; Approved: Permit approved
+  InReview --&gt; Resolved: Complaint resolved
+  InReview --&gt; Rejected: Decision recorded
+  Resolved --&gt; Submitted: Complaint reopened
+  Approved --&gt; [*]
+  Rejected --&gt; [*]
+  Withdrawn --&gt; [*]</code></pre><p>A version number guards decisions, assignment and draft updates against stale writes. Workflow changes, history and notifications are committed together. Files moved during a failed transaction are removed. Reopening sets a fresh target and clears prior feedback.</p><h2 id="core-data-relationships">Core data relationships</h2><pre><code>erDiagram
+  DEPARTMENT ||--o{ SERVICE : publishes
+  DEPARTMENT ||--o{ USER : contains_staff
+  USER ||--o{ REQUEST : submits
+  SERVICE ||--o{ REQUEST : categorises
+  DEPARTMENT ||--o{ REQUEST : processes
+  REQUEST ||--o{ EVENT : records
+  REQUEST ||--o{ ATTACHMENT : supports
+  REQUEST ||--o| FEEDBACK : receives
+  USER ||--o{ NOTIFICATION : receives
+  USER ||--o{ OUTBOX : addressed_to</code></pre><p><code>requests.assigned_to</code> also references a staff user. Request ownership, selected service department and current routing department are separate fields so routing can change without replacing the request record.</p><pre><code>erDiagram
+  ROLE ||--o{ ROLE_PERMISSION : grants
+  ROLE ||--o{ USER_ROLE : assigned_as_extra
+  USER ||--o{ USER_ROLE : holds
+  USER ||--o{ DEVICE_SESSION : authenticates
+  USER ||--o{ RECOVERY_CODE : recovers
+  USER ||--o{ PASSWORD_RESET : requests
+  USER ||--o{ EMAIL_VERIFICATION : confirms
+  EMAIL_TEMPLATE ||--o{ OUTBOX : renders_for</code></pre><p>The primary role is stored on <code>users.role</code>; additional roles use <code>user_roles</code>. Template keys on outbox records are references for traceability, while each message stores its rendered body so later template edits do not alter queued text. Reset/verification tokens and recovery codes are stored as hashes. MFA and provider secrets are encrypted under the installation key.</p><h2 id="permission-evaluation">Permission evaluation</h2><p>A request begins with an active session and account version. The application loads permissions from active primary/additional roles, except the protected administrator role which has the full catalogue. SQL lists use the user&#x27;s scope and individual record reads enforce it again. Mutations require action permission independently of whether a page or menu item is visible. Downloads also require document permission, request scope and internal-document permission where applicable.</p><p>Draft privacy is enforced on individual reads as well as staff lists. Scope precedence is organisation, department, then own. Default citizen permissions can only remain within the allowed public capability set.</p><h2 id="notification-processing">Notification processing</h2><pre><code>flowchart TD
+  E[&quot;Workflow / account event&quot;] --&gt; I[&quot;In-app notice&quot;]
+  E --&gt; V[&quot;Preference and channel checks&quot;]
+  V --&gt; H[&quot;Held: configuration required&quot;]
+  V --&gt; O[&quot;Outbox: pending&quot;]
+  O --&gt; C[&quot;Worker claim under lock&quot;]
+  C --&gt; P[&quot;Provider request&quot;]
+  P --&gt; S[&quot;Accepted: sent&quot;]
+  P --&gt; R[&quot;Failure: retry with backoff&quot;]
+  R --&gt; O
+  R --&gt; F[&quot;Five failures: stop&quot;]</code></pre><p>The job checks disabled channels before delivery and conditionally claims pending/retry rows. Cancellation cannot claim a processing record. Provider acceptance is recorded, but a crash around a provider acknowledgement can still cause a repeated delivery attempt. The system does not claim exactly-once transport.</p><h2 id="file-and-configuration-boundary">File and configuration boundary</h2><ul><li>Root <code>.htaccess</code> denies private directories, dot paths, SQL/log/archive artifacts and setup instructions.</li><li>Each private directory also carries a denial file. Uploaded files have random names, validated MIME types and scoped download routes.</li><li>Application configuration and install lock are generated locally after setup. There is no bundled live database or account password.</li><li>SQL reference files are generated from the same schema definitions used by the installer.</li><li>The application uses a single-instance cPanel topology. Multi-node sessions, shared files, distributed rate limiting and operational monitoring are deployment extensions.</li></ul></main></body></html>

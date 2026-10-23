@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>additional-models</title><link rel="stylesheet" href="../site.css"></head><body><main><nav><a href="../../START_HERE.html">CivicFlow project home</a></nav><h1 id="additional-formal-model-sources">Additional formal model sources</h1><p>These editable Mermaid sources complement the rendered SVG and PNG views in the diagram gallery.</p><h2 id="use-case-associations">Use case associations</h2><pre><code>flowchart TD
+    Citizen[Citizen] --&gt; Access[Account access]
+    Citizen --&gt; Requests[Submit and track own requests]
+    Citizen --&gt; Replies[Reply and give feedback]
+    Officer[Officer or department head] --&gt; Review[Review and record decisions]
+    Auditor[Auditor] --&gt; Oversight[Reports and audit]
+    Comms[Communications officer] --&gt; Delivery[Outbox and public notices]
+    Admin[Administrator] --&gt; Settings[People permissions and services]</code></pre><h2 id="submission-and-information-reply-sequence">Submission and information reply sequence</h2><pre><code>sequenceDiagram
+    participant C as Citizen
+    participant P as Portal
+    participant D as Database
+    participant O as Department officer
+    C-&gt;&gt;P: Submit completed complaint
+    P-&gt;&gt;D: Persist request target and event
+    D--&gt;&gt;P: Return stable reference
+    P--&gt;&gt;C: Show private receipt and code
+    O-&gt;&gt;P: Start review and ask for information
+    P-&gt;&gt;D: Check scope and version then save reason
+    C-&gt;&gt;P: Reply within owned request
+    P-&gt;&gt;D: Record reply and return to Submitted
+    O-&gt;&gt;P: Review and record reasoned outcome</code></pre><h2 id="deployment-topology">Deployment topology</h2><pre><code>flowchart TD
+    Browser[Citizen and staff browsers] --&gt; Web[HTTPS Apache and PHP]
+    Web --&gt; DB[MySQL or MariaDB]
+    Web --&gt; Files[Private storage]
+    Web --&gt; AI[Optional AI with public context]
+    Cron[Scheduled CLI worker] --&gt; DB
+    Cron --&gt; Providers[SMTP and SMS providers]</code></pre></main></body></html>

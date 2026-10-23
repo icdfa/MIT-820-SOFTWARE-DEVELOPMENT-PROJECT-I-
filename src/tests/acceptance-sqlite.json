@@ -1,0 +1,505 @@
+{
+  "database": "sqlite",
+  "total": 124,
+  "passed": 124,
+  "checks": [
+    {
+      "check": "Installer renders before database setup",
+      "passed": true
+    },
+    {
+      "check": "Incorrect setup key refused",
+      "passed": true
+    },
+    {
+      "check": "Missing setup key fails closed",
+      "passed": true
+    },
+    {
+      "check": "Installer creates database and locks setup",
+      "passed": true
+    },
+    {
+      "check": "Installer locked after setup",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/setup-complete",
+      "passed": true
+    },
+    {
+      "check": "Page renders /dashboard",
+      "passed": true
+    },
+    {
+      "check": "Page renders /services",
+      "passed": true
+    },
+    {
+      "check": "Page renders /services/3",
+      "passed": true
+    },
+    {
+      "check": "Page renders /requests",
+      "passed": true
+    },
+    {
+      "check": "Page renders /reports",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/users",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/roles",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/templates",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/compose",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/outbox",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/audit",
+      "passed": true
+    },
+    {
+      "check": "Page renders /admin/settings",
+      "passed": true
+    },
+    {
+      "check": "Page renders /profile",
+      "passed": true
+    },
+    {
+      "check": "Page renders /profile/security",
+      "passed": true
+    },
+    {
+      "check": "Page renders /assistant",
+      "passed": true
+    },
+    {
+      "check": "Page renders /help",
+      "passed": true
+    },
+    {
+      "check": "Page renders /privacy",
+      "passed": true
+    },
+    {
+      "check": "Page renders /about",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /config/setup.key",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /config/local.php",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /storage/civicflow.sqlite",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /storage/uploads/test.pdf",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /app/security.php",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /vendor/phpmailer/SMTP.php",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /docs/test.md",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /.env",
+      "passed": true
+    },
+    {
+      "check": "Private URL denied /START_HERE.html",
+      "passed": true
+    },
+    {
+      "check": "PHP address redirects to clean URL",
+      "passed": true
+    },
+    {
+      "check": "Index address canonicalised",
+      "passed": true
+    },
+    {
+      "check": "Local assets available",
+      "passed": true
+    },
+    {
+      "check": "POST without CSRF token rejected",
+      "passed": true
+    },
+    {
+      "check": "Passwords beyond bcrypt byte limit rejected",
+      "passed": true
+    },
+    {
+      "check": "Citizen registration succeeds",
+      "passed": true
+    },
+    {
+      "check": "Registration cannot elevate role",
+      "passed": true
+    },
+    {
+      "check": "Email verification token hidden from operations",
+      "passed": true
+    },
+    {
+      "check": "Email verification succeeds",
+      "passed": true
+    },
+    {
+      "check": "Email verification token single-use",
+      "passed": true
+    },
+    {
+      "check": "Malformed query array rejected",
+      "passed": true
+    },
+    {
+      "check": "Citizen direct access denied /admin/users",
+      "passed": true
+    },
+    {
+      "check": "Citizen direct access denied /admin/settings",
+      "passed": true
+    },
+    {
+      "check": "Citizen direct access denied /admin/outbox",
+      "passed": true
+    },
+    {
+      "check": "Citizen direct access denied /admin/roles",
+      "passed": true
+    },
+    {
+      "check": "Citizen direct access denied /reports/export",
+      "passed": true
+    },
+    {
+      "check": "Citizen admin POST denied",
+      "passed": true
+    },
+    {
+      "check": "Complaint submission succeeds",
+      "passed": true
+    },
+    {
+      "check": "Routing, reference and SLA set",
+      "passed": true
+    },
+    {
+      "check": "User content escaped",
+      "passed": true
+    },
+    {
+      "check": "Form labels use unique HTML IDs",
+      "passed": true
+    },
+    {
+      "check": "Receipt available to owner",
+      "passed": true
+    },
+    {
+      "check": "Another citizen cannot read request",
+      "passed": true
+    },
+    {
+      "check": "Officer can read own department request",
+      "passed": true
+    },
+    {
+      "check": "Officer cannot read other department request",
+      "passed": true
+    },
+    {
+      "check": "Citizen cannot decide own request",
+      "passed": true
+    },
+    {
+      "check": "Invalid workflow transition refused",
+      "passed": true
+    },
+    {
+      "check": "Officer starts review",
+      "passed": true
+    },
+    {
+      "check": "Concurrent stale update refused",
+      "passed": true
+    },
+    {
+      "check": "Internal note and attachment saved",
+      "passed": true
+    },
+    {
+      "check": "Internal note hidden from citizen",
+      "passed": true
+    },
+    {
+      "check": "Internal attachment hidden from citizen",
+      "passed": true
+    },
+    {
+      "check": "Authorised staff can download internal attachment",
+      "passed": true
+    },
+    {
+      "check": "Information requested",
+      "passed": true
+    },
+    {
+      "check": "Citizen reply resubmits request",
+      "passed": true
+    },
+    {
+      "check": "Owner document download works",
+      "passed": true
+    },
+    {
+      "check": "Other citizen document download denied",
+      "passed": true
+    },
+    {
+      "check": "Other department document download denied",
+      "passed": true
+    },
+    {
+      "check": "Complaint resolved",
+      "passed": true
+    },
+    {
+      "check": "Citizen feedback recorded",
+      "passed": true
+    },
+    {
+      "check": "Resolved complaint reopened with fresh target",
+      "passed": true
+    },
+    {
+      "check": "Reopen clears prior feedback",
+      "passed": true
+    },
+    {
+      "check": "Private-code public tracking works",
+      "passed": true
+    },
+    {
+      "check": "Public tracker does not expose applicant or documents",
+      "passed": true
+    },
+    {
+      "check": "Incorrect tracking code refused",
+      "passed": true
+    },
+    {
+      "check": "Permit requires supporting documents",
+      "passed": true
+    },
+    {
+      "check": "MIME spoofed PHP upload refused",
+      "passed": true
+    },
+    {
+      "check": "Permit with valid PDF submitted",
+      "passed": true
+    },
+    {
+      "check": "Permit approval completed",
+      "passed": true
+    },
+    {
+      "check": "Public approval verification excludes applicant",
+      "passed": true
+    },
+    {
+      "check": "Draft saved without SLA or assignment",
+      "passed": true
+    },
+    {
+      "check": "Unsubmitted draft private from staff",
+      "passed": true
+    },
+    {
+      "check": "Draft can be submitted once",
+      "passed": true
+    },
+    {
+      "check": "Eligible request withdrawn",
+      "passed": true
+    },
+    {
+      "check": "Report CSV prevents formula execution",
+      "passed": true
+    },
+    {
+      "check": "Overdue workflow escalates once",
+      "passed": true
+    },
+    {
+      "check": "Repeated workflow does not duplicate escalation",
+      "passed": true
+    },
+    {
+      "check": "External delivery held without credentials",
+      "passed": true
+    },
+    {
+      "check": "Cannot release unconfigured channel",
+      "passed": true
+    },
+    {
+      "check": "Outbox cancellation works",
+      "passed": true
+    },
+    {
+      "check": "Offline assistant identifies service-guide response",
+      "passed": true
+    },
+    {
+      "check": "Custom role saved",
+      "passed": true
+    },
+    {
+      "check": "Custom role can access department request",
+      "passed": true
+    },
+    {
+      "check": "Separate decision permission enforced",
+      "passed": true
+    },
+    {
+      "check": "Separate assignment permission enforced",
+      "passed": true
+    },
+    {
+      "check": "Auditor reads reports and audit trail",
+      "passed": true
+    },
+    {
+      "check": "Auditor cannot edit service or download documents",
+      "passed": true
+    },
+    {
+      "check": "Communications dashboard uses operational tools",
+      "passed": true
+    },
+    {
+      "check": "Communications role isolated from cases",
+      "passed": true
+    },
+    {
+      "check": "HTML email template strips unsafe markup",
+      "passed": true
+    },
+    {
+      "check": "Composed notice queues escaped HTML",
+      "passed": true
+    },
+    {
+      "check": "Integration credential encrypted at rest",
+      "passed": true
+    },
+    {
+      "check": "SMTP failure schedules retry without exposing credentials",
+      "passed": true
+    },
+    {
+      "check": "Delivery stops after five failed attempts",
+      "passed": true
+    },
+    {
+      "check": "Permission changes revoke affected sessions",
+      "passed": true
+    },
+    {
+      "check": "Reset token hidden from outbox UI",
+      "passed": true
+    },
+    {
+      "check": "Password reset succeeds",
+      "passed": true
+    },
+    {
+      "check": "Reset revokes existing session",
+      "passed": true
+    },
+    {
+      "check": "Reset token cannot be reused",
+      "passed": true
+    },
+    {
+      "check": "Authenticator MFA enabled",
+      "passed": true
+    },
+    {
+      "check": "Eight recovery codes shown once",
+      "passed": true
+    },
+    {
+      "check": "MFA required after correct password",
+      "passed": true
+    },
+    {
+      "check": "Pending MFA cannot access dashboard",
+      "passed": true
+    },
+    {
+      "check": "Recovery code completes sign-in",
+      "passed": true
+    },
+    {
+      "check": "Recovery code cannot be replayed",
+      "passed": true
+    },
+    {
+      "check": "Authenticator code completes sign-in",
+      "passed": true
+    },
+    {
+      "check": "Remote device revocation enforced",
+      "passed": true
+    },
+    {
+      "check": "MFA secret encrypted at rest",
+      "passed": true
+    },
+    {
+      "check": "Passwords hashed at rest",
+      "passed": true
+    },
+    {
+      "check": "Audit trail populated",
+      "passed": true
+    },
+    {
+      "check": "No application warnings or exceptions",
+      "passed": true
+    }
+  ],
+  "time_utc": "2026-10-19T15:19:05Z",
+  "runtime": "PHP 8.3.6 (cli) (built: Jul 16 2026 18:30:41) (NTS)"
+}

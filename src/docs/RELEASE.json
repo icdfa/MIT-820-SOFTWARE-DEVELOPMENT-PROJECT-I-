@@ -1,0 +1,30 @@
+{
+  "project": "Smart Government Service Delivery Platform",
+  "product": "CivicFlow",
+  "version": "1.0.4",
+  "prepared_date": "2026-10-19",
+  "runtime_minimum": "PHP 8.2",
+  "tested_php": "8.3.6",
+  "schema_tables": 21,
+  "phpmailer_version": "7.1.1",
+  "acceptance_checks": 267,
+  "tests": [
+    "tests/acceptance-sqlite.json",
+    "tests/acceptance-live.json",
+    "tests/acceptance-installer.json",
+    "tests/acceptance-landing-demo.json",
+    "tests/acceptance-carousel.json"
+  ],
+  "distribution": "Fresh uninstalled cPanel source package; no live credentials or database",
+  "installer_regressions": 5,
+  "ui": "Public image carousel and conventional portal screens, without the homepage demonstration banner or repeated footer label",
+  "php_files": 26,
+  "http_checks": 255,
+  "carousel_unit_checks": 12,
+  "demo_accounts_added": 26,
+  "demo_requests_added": 36,
+  "demo_private_pdf_fixtures": 27,
+  "demo_outbox_examples": 34,
+  "demo_loader": "Explicit primary-admin action at /admin/demo-data; no automatic mutation on upload",
+  "data_origin_disclosure": "About page and relevant approval/verification documents"
+}

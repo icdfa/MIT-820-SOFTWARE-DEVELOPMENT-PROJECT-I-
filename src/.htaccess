@@ -1,0 +1,26 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Preserve standard hosting certificate validation files.
+RewriteRule ^\.well-known/(?:acme-challenge/[A-Za-z0-9_-]+|pki-validation/[A-Za-z0-9_-]+\.txt)$ - [L]
+# Never expose application code, secrets, uploaded documents or project notes.
+RewriteRule ^(?:app|config|storage|database|cron|docs|tests|vendor)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(?:START_HERE\.html|README\.md|LICENSE.*|THIRD_PARTY.*|.*\.(?:sql|log|bak|zip|md))$ - [F,L,NC]
+# Canonical extension-free addresses, including direct requests to index.php.
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*index\.php(?:[?\s]) [NC]
+RewriteRule ^index\.php$ ./ [R=308,L]
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*\.php(?:[?\s]) [NC]
+RewriteRule ^(.+)\.php$ $1 [R=308,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "same-origin"
+</IfModule>
+<FilesMatch "^(?:composer\..*|package\..*|\.env.*)$">
+Require all denied
+</FilesMatch>

@@ -1,0 +1,60 @@
+{
+  "database": "sqlite-live",
+  "total": 13,
+  "passed": 13,
+  "checks": [
+    {
+      "check": "Installer renders before database setup",
+      "passed": true
+    },
+    {
+      "check": "Incorrect setup key refused",
+      "passed": true
+    },
+    {
+      "check": "Missing setup key fails closed",
+      "passed": true
+    },
+    {
+      "check": "Installer creates database and locks setup",
+      "passed": true
+    },
+    {
+      "check": "Installer locked after setup",
+      "passed": true
+    },
+    {
+      "check": "Live mode contains only administrator account",
+      "passed": true
+    },
+    {
+      "check": "Live services unpublished and zero fee",
+      "passed": true
+    },
+    {
+      "check": "Live mode has no sample requests",
+      "passed": true
+    },
+    {
+      "check": "Live public home uses organisation identity",
+      "passed": true
+    },
+    {
+      "check": "Administrator publishes service",
+      "passed": true
+    },
+    {
+      "check": "Live citizen registration works",
+      "passed": true
+    },
+    {
+      "check": "Live workspace has no academic branding",
+      "passed": true
+    },
+    {
+      "check": "Live request can be submitted",
+      "passed": true
+    }
+  ],
+  "time_utc": "2026-10-19T15:19:54Z"
+}

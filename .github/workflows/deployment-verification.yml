@@ -1,0 +1,33 @@
+name: Verify an authorised staging deployment
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Public HTTPS address of the authorised staging installation
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  availability:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    env:
+      STAGING_BASE_URL: ${{ inputs.base_url }}
+    steps:
+      - name: Check HTTPS public entry points
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request,urllib.parse,json
+          base=os.environ['STAGING_BASE_URL'].rstrip('/')
+          u=urllib.parse.urlsplit(base)
+          if u.scheme!='https' or not u.hostname or u.username or u.password or u.query or u.fragment:
+              raise SystemExit('Supply a public HTTPS base URL without credentials, query or fragment.')
+          results=[]
+          for path in ['/','/services','/login']:
+              with urllib.request.urlopen(base+path,timeout=20) as r:
+                  result={'path':path,'status':r.status,'final_scheme':urllib.parse.urlsplit(r.url).scheme}
+                  if r.status!=200 or result['final_scheme']!='https':raise SystemExit('Availability check failed')
+                  results.append(result)
+          print(json.dumps(results,indent=2))
+          PY

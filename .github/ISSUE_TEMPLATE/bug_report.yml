@@ -1,0 +1,29 @@
+name: Defect report
+description: Record a reproducible application or documentation defect
+title: "[Defect] "
+labels: [bug]
+body:
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement and application release
+      placeholder: FR09, application 1.0.4
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and environment
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and affected scope
+      description: Use anonymised screenshots and exclude passwords or private records.

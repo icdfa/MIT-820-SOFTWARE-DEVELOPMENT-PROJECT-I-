@@ -1,0 +1,35 @@
+{
+  "release": "1.0.2",
+  "suite": "installer regression",
+  "total": 5,
+  "passed": 5,
+  "time_utc": "2026-10-19T15:19:56Z",
+  "checks": [
+    {
+      "case": "missing_folders",
+      "passed": true,
+      "http": 303
+    },
+    {
+      "case": "blocked_cache",
+      "passed": true,
+      "http": 200
+    },
+    {
+      "case": "blocked_mutex",
+      "passed": true,
+      "http": 200
+    },
+    {
+      "case": "blocked_sessions",
+      "passed": true,
+      "http": 503
+    },
+    {
+      "case": "database_unreachable",
+      "passed": true,
+      "http": 200
+    }
+  ],
+  "prior_release_reproduction": []
+}

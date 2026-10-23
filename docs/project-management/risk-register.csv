@@ -1,0 +1,7 @@
+id,risk,likelihood_1_to_5,impact_1_to_5,proposed_score,owner,treatment,status,review_date,evidence
+R01,Missing approval record,3,5,15,Bolaji Watson,Attach actual dated supervisor approval,Open,,
+R02,Hosted system unavailable at defence,3,5,15,Aminu Idris,Independent check and local contingency,Open,,
+R03,Unintended private record access,2,5,10,Aminu Idris,Negative scoped-access and protected-path checks,Open,,
+R04,Provider quota or delivery failure,3,3,9,Aminu Idris,Verify configured accounts and local fallback,Open,,
+R05,Late scope growth,3,4,12,Bolaji Watson,Scope gate and reviewed change register,Open,,
+R06,Insufficient contribution evidence,3,4,12,All members,Record actual commits reviews and peer assessment,Open,,

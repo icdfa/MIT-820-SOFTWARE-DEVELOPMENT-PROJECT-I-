@@ -1,0 +1,465 @@
+{
+  "release": "1.0.4",
+  "suite": "landing and demonstration data",
+  "database": "sqlite",
+  "total": 113,
+  "passed": 113,
+  "demo_accounts": 26,
+  "demo_requests": 36,
+  "attachment_fixtures": 27,
+  "time_utc": "2026-10-19T15:18:39Z",
+  "checks": [
+    {
+      "check": "Fresh live-mode installation remains supported",
+      "passed": true
+    },
+    {
+      "check": "Upload or installation does not automatically create presentation records",
+      "passed": true
+    },
+    {
+      "check": "Landing page renders without presentation records",
+      "passed": true
+    },
+    {
+      "check": "Carousel has 3 slides and accessible controls",
+      "passed": true
+    },
+    {
+      "check": "Carousel uses local images and no inline handlers",
+      "passed": true
+    },
+    {
+      "check": "Landing service search and private-code tracking forms are wired",
+      "passed": true
+    },
+    {
+      "check": "Local slider image loads: citizen-services",
+      "passed": true
+    },
+    {
+      "check": "Local slider image loads: community-works",
+      "passed": true
+    },
+    {
+      "check": "Local slider image loads: business-permits",
+      "passed": true
+    },
+    {
+      "check": "Landing asset loads: /assets/css/landing.css",
+      "passed": true
+    },
+    {
+      "check": "Landing asset loads: /assets/js/landing.js",
+      "passed": true
+    },
+    {
+      "check": "Live landing page does not claim demo activity",
+      "passed": true
+    },
+    {
+      "check": "Dataset and source cannot be fetched from the web",
+      "passed": true
+    },
+    {
+      "check": "Anonymous data-loader access requires sign-in",
+      "passed": true
+    },
+    {
+      "check": "Admin loader GET is read-only",
+      "passed": true
+    },
+    {
+      "check": "Data loader requires CSRF",
+      "passed": true
+    },
+    {
+      "check": "Invalid demonstration password creates no data",
+      "passed": true
+    },
+    {
+      "check": "Explicit demonstration confirmation is required",
+      "passed": true
+    },
+    {
+      "check": "Existing citizen account can be created before a demo load",
+      "passed": true
+    },
+    {
+      "check": "Existing request and uploaded evidence are prepared",
+      "passed": true
+    },
+    {
+      "check": "Catalogue conflicts fail without overwriting operator data",
+      "passed": true
+    },
+    {
+      "check": "Catalogue conflict rolls back earlier publications",
+      "passed": true
+    },
+    {
+      "check": "Administrator loads complete dataset",
+      "passed": true
+    },
+    {
+      "check": "All 26 account records and 36 cases are tracked",
+      "passed": true
+    },
+    {
+      "check": "Six roles covered without adding another administrator",
+      "passed": true
+    },
+    {
+      "check": "All eight request stages are present",
+      "passed": true
+    },
+    {
+      "check": "Starter catalogue is published; existing fee retained",
+      "passed": true
+    },
+    {
+      "check": "Existing administrator password and config are preserved",
+      "passed": true
+    },
+    {
+      "check": "Existing request fields and private upload are unchanged",
+      "passed": true
+    },
+    {
+      "check": "Demonstration contacts are reserved addresses with no invented phones",
+      "passed": true
+    },
+    {
+      "check": "34 notification examples are cancelled without provider attempts",
+      "passed": true
+    },
+    {
+      "check": "Existing delivery configuration is retained",
+      "passed": true
+    },
+    {
+      "check": "Owner notifications, staff assignments and feedback populated",
+      "passed": true
+    },
+    {
+      "check": "No orphan records",
+      "passed": true
+    },
+    {
+      "check": "Cases have realistic descriptions and private random tracking codes",
+      "passed": true
+    },
+    {
+      "check": "Drafts are unassigned and closed cases have completion dates",
+      "passed": true
+    },
+    {
+      "check": "Every submitted permit has private supporting evidence",
+      "passed": true
+    },
+    {
+      "check": "Fixture PDFs have valid headers and tracked sizes",
+      "passed": true
+    },
+    {
+      "check": "Generated evidence is a readable one-page PDF with demonstration label",
+      "passed": true
+    },
+    {
+      "check": "Repeated load is idempotent",
+      "passed": true
+    },
+    {
+      "check": "Admin receives role guide and named account directory",
+      "passed": true
+    },
+    {
+      "check": "Account CSV escapes spreadsheet formula prefixes",
+      "passed": true
+    },
+    {
+      "check": "Account directory export contains all demo users without passwords",
+      "passed": true
+    },
+    {
+      "check": "Loaded data appears in public services, department cards and notices",
+      "passed": true
+    },
+    {
+      "check": "Home and workspace omit demonstration banners while data provenance remains in About",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: amina.bello@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: amina.bello@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: chinedu.okafor@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: chinedu.okafor@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: fatima.sani@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: fatima.sani@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: daniel.adeyemi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: daniel.adeyemi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: zainab.usman@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: zainab.usman@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: ifeanyi.nwankwo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: ifeanyi.nwankwo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: maryam.adamu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: maryam.adamu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: tunde.olawale@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: tunde.olawale@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: esther.akpan@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: esther.akpan@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: yusuf.ibrahim@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: yusuf.ibrahim@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: grace.ogbole@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: grace.ogbole@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: abdulrahman.aliyu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: abdulrahman.aliyu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: abdullahi.musa@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: abdullahi.musa@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: rebecca.danjuma@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: rebecca.danjuma@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: kenneth.obi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: kenneth.obi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: hadiza.sule@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: hadiza.sule@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: paul.eze@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: paul.eze@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: safiya.umar@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: safiya.umar@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: olumide.akinyemi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: olumide.akinyemi@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: rose.dogo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: rose.dogo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: usman.shuaibu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: usman.shuaibu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: elizabeth.okonkwo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: elizabeth.okonkwo@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: musa.sani@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: musa.sani@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: victoria.odeh@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: victoria.odeh@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: joseph.nwosu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: joseph.nwosu@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Normal login works: hauwa.saleh@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Populated workspace renders: hauwa.saleh@civicflow.example.test",
+      "passed": true
+    },
+    {
+      "check": "Data loader denied to citizen",
+      "passed": true
+    },
+    {
+      "check": "Data loader denied to officer",
+      "passed": true
+    },
+    {
+      "check": "Data loader denied to department_head",
+      "passed": true
+    },
+    {
+      "check": "Data loader denied to auditor",
+      "passed": true
+    },
+    {
+      "check": "Data loader denied to communications",
+      "passed": true
+    },
+    {
+      "check": "Citizen can open own record and cannot open another citizen record",
+      "passed": true
+    },
+    {
+      "check": "officer remains department-scoped",
+      "passed": true
+    },
+    {
+      "check": "department_head remains department-scoped",
+      "passed": true
+    },
+    {
+      "check": "Own evidence downloads and another citizen evidence is blocked",
+      "passed": true
+    },
+    {
+      "check": "Auditor sees cases and audit but cannot download internal documents",
+      "passed": true
+    },
+    {
+      "check": "Communications can view outbox and templates without case access",
+      "passed": true
+    },
+    {
+      "check": "Anonymous attachments require authentication",
+      "passed": true
+    },
+    {
+      "check": "Landing tracking uses the existing private-code flow",
+      "passed": true
+    },
+    {
+      "check": "Sample approval verification is labelled and excludes applicant identity",
+      "passed": true
+    },
+    {
+      "check": "Additional role cannot bypass primary-admin data-loader check",
+      "passed": true
+    },
+    {
+      "check": "No unexpected PHP warnings or application exceptions",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: Project task
+description: Track a backlog item, course gate or review action
+title: "[Task] "
+body:
+  - type: input
+    id: reference
+    attributes:
+      label: Backlog item and requirement
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance conditions
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner and target date
+  - type: textarea
+    id: review
+    attributes:
+      label: Evidence and reviewer

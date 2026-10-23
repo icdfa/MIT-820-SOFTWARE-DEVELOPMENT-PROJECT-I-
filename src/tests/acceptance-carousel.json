@@ -1,0 +1,57 @@
+{
+  "release": "1.0.4",
+  "suite": "carousel interaction fixture",
+  "total": 12,
+  "passed": 12,
+  "checks": [
+    {
+      "check": "First slide and accessible controls are ready",
+      "passed": true
+    },
+    {
+      "check": "Automatic rotation advances and wraps",
+      "passed": true
+    },
+    {
+      "check": "Manual next pauses rotation and announces the slide",
+      "passed": true
+    },
+    {
+      "check": "Previous control wraps from first to last",
+      "passed": true
+    },
+    {
+      "check": "Slide selector updates visible content and current state",
+      "passed": true
+    },
+    {
+      "check": "Arrow keys navigate from the controls",
+      "passed": true
+    },
+    {
+      "check": "Play resumes when the carousel is not focused",
+      "passed": true
+    },
+    {
+      "check": "Hover pauses and leaving resumes",
+      "passed": true
+    },
+    {
+      "check": "Keyboard focus pauses automatic rotation",
+      "passed": true
+    },
+    {
+      "check": "Background tab pauses and visible tab resumes",
+      "passed": true
+    },
+    {
+      "check": "Reduced-motion preference stops automatic rotation",
+      "passed": true
+    },
+    {
+      "check": "Non-landing pages require no carousel elements",
+      "passed": true
+    }
+  ],
+  "browser_rendering_test": false
+}

@@ -1,0 +1,39 @@
+name: Repository and application checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  documentation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify local documentation and image links
+        run: python3 tools/validate_repo.py
+      - name: Validate private release packaging
+        run: python3 tools/build_release.py --output /tmp/civicflow-ci-check.zip
+  application:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PHP extensions and PDF fixture dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php-cli php-sqlite3 php-mysql php-mbstring php-curl php-xml
+          python3 -m venv /tmp/civicflow-qa
+          /tmp/civicflow-qa/bin/pip install -r requirements-dev.txt
+      - name: PHP and JavaScript syntax
+        run: |
+          find src -name '*.php' -print0 | xargs -0 -n1 php -l
+          node --check src/assets/js/app.js
+          node --check src/assets/js/landing.js
+      - name: Workflow and installation acceptance
+        run: |
+          /tmp/civicflow-qa/bin/python src/tests/http_acceptance.py --php /usr/bin/php
+          /tmp/civicflow-qa/bin/python src/tests/http_acceptance.py --php /usr/bin/php --live
+          /tmp/civicflow-qa/bin/python src/tests/installer_regression.py --php /usr/bin/php
+          /tmp/civicflow-qa/bin/python src/tests/landing_demo_acceptance.py --php /usr/bin/php
+          node src/tests/carousel_interactions.cjs
