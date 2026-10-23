@@ -25,8 +25,4 @@
 
 ## Calendar mapping
 
-The guide describes an eleven-week milestone sequence. The portal window supplied to Group 1 is 28 September to 29 November 2026, or nine calendar weeks. The remaining plan starts on 23 October, retains every review gate and preserves the stated defence and submission dates. The compressed mapping requires supervisor confirmation and does not claim a course-approved deadline change.
-
-## Evidence distinction
-
-The documents and workflow definitions are supplied artifacts. Signed approval, actual meeting minutes, accepted contribution records, human evaluation, hosted checks and GitHub run results must come from the events they describe. Prepared forms do not establish that those events have already occurred.
+The portal window supplied to Group 1 is 28 September to 29 November 2026, or nine calendar weeks. The remaining plan starts on 23 October, retains every review gate and preserves the stated defence and submission dates. The compressed mapping requires supervisor confirmation and does not claim a course-approved deadline change.
