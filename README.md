@@ -1,18 +1,30 @@
+
 <img src="docs/assets/brand/civicflow.svg" alt="CivicFlow emblem" width="100">
 
 # CivicFlow
 
 **Smart Government Service Delivery Platform**
 
-Group 1, MIT 820 Software Development Project I, Iconic University Sokoto Nigeria.
+Group 1, MIT 820 Software Development Project I, Iconic University Sokoto, Nigeria.
+
+### Live Project
+
+**Project URL:** https://iconicproject.icdfafoundation.com.ng/
+
+**[Access CivicFlow – Live Project](https://iconicproject.icdfafoundation.com.ng/)**
 
 CivicFlow connects citizen complaints and permit applications to departmental review, private evidence, progress tracking and a recorded outcome. The citizen portal opens after account creation and sign-in. Staff work through roles, action permissions and record scopes.
 
 Application baseline **1.0.4**. Documentation revision **1.1**, dated **23 October 2026**.
 
+### Project Documentation
+
 [Documentation](docs/README.md) · [Course alignment](docs/COURSE_ALIGNMENT.md) · [Diagrams](docs/DIAGRAMS.md) · [Setup](docs/technical/setup.md) · [Testing](docs/technical/testing.md)
 
+### Platform Preview
+
 ![Citizen service imagery used by the landing page](src/assets/img/landing/citizen-services.webp)
+
 
 ## Main capabilities
 
