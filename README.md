@@ -10,7 +10,7 @@ CivicFlow connects citizen complaints and permit applications to departmental re
 
 Application baseline **1.0.4**. Documentation revision **1.1**, dated **23 October 2026**.
 
-[Documentation](docs/README.md) · [Course alignment](docs/COURSE_ALIGNMENT.md) · [Diagrams](docs/DIAGRAMS.md) · [Setup](docs/technical/setup.md) · [Testing](docs/technical/testing.md) · [GitHub upload guide](docs/GITHUB_UPLOAD.md)
+[Documentation](docs/README.md) · [Course alignment](docs/COURSE_ALIGNMENT.md) · [Diagrams](docs/DIAGRAMS.md) · [Setup](docs/technical/setup.md) · [Testing](docs/technical/testing.md)
 
 ![Citizen service imagery used by the landing page](src/assets/img/landing/citizen-services.webp)
 
