@@ -1,6 +1,5 @@
 # Diagram and interface gallery
 
-All figures use repository-relative paths. PNG files display immediately, and SVG files remain editable. The wireframes are design views and the burndown is a proposed plan.
 
 ## Application architecture
 
