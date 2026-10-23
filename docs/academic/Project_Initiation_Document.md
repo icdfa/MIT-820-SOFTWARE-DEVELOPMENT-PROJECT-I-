@@ -39,7 +39,7 @@ This PID defines the business case, objectives, scope, responsibilities, deliver
 | Product and baseline | CivicFlow application 1.0.4; documentation 1.1 |
 | Institution and course | Iconic University Sokoto Nigeria; MIT 820 |
 | Project manager | Bolaji Watson |
-| Academic supervisor | ___________________________________ |
+| Academic supervisor | Dr. Gabril Akinremi |
 | Proposal approval reference and date | ___________________________________ |
 | Scope or schedule conditions | ___________________________________ |
 | Supervisor signature | ___________________________________ |
