@@ -1,6 +1,6 @@
 # MIT 820 course alignment
 
-This matrix follows the supplied Iconic University **Guidelines on MIT 820 Software Development Project I**, sections 1 to 8. The guide requires a professional software artifact and a report that justifies technical decisions. It does not provide numeric assessment weights or a mandatory chapter count. Group 1 retains the five-chapter academic report and adds the named course artifacts.
+
 
 | Guideline requirement | Artifact or repository evidence | Final evidence needed |
 | --- | --- | --- |
