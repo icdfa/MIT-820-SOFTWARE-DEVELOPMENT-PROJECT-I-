@@ -1,2 +1,2 @@
 # PDF fixture inspection used by the landing and dataset acceptance suite
-pypdf==6.10.0
+pypdf==6.21.1
